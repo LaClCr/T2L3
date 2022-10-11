@@ -43,3 +43,10 @@ EXERCICI 7
 ================
 
 cat users.txt | grep -v ^[#] | cut -d: -f1
+
+================
+EXERCICI 8
+================
+
+cat users.txt | grep -v ^[#,_] | cut -d: -f1
+
