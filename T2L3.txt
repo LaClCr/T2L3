@@ -62,3 +62,8 @@ EXERCICI 10
 
 cat -n users.txt | sort -rn
 
+================
+EXERCICI 11
+================
+
+cat users.txt | sort -t: -k3 -n
