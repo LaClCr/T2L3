@@ -67,3 +67,9 @@ EXERCICI 11
 ================
 
 cat users.txt | sort -t: -k3 -n
+
+================
+EXERCICI 12
+================
+
+cat users.txt | grep -v ^[#] | cut -d: -f4 | sort -n1
