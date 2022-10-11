@@ -1,0 +1,5 @@
+================
+EXERCICI 1
+================
+head -n10 users.txt 
+//head s'utilitza per a mostrar les X primeres línies d'un fitxer.
