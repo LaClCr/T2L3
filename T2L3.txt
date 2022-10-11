@@ -56,3 +56,9 @@ EXERCICI 9
 
 cat users.txt | grep -v ^[#] | cut -d: -f3
 
+================
+EXERCICI 10
+================
+
+cat -n users.txt | sort -rn
+
