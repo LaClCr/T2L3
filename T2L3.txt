@@ -25,3 +25,9 @@ EXERCICI 4
 tail -n+11 users.txt | head -n10
 //Li demanem que ens mostre les últimes línies a partir de la 11, i després fem un pipeline
 per a que ens mostre les 10 primeres sobre el comand anterior.
+
+================
+EXERCICI 5
+================
+
+cut -b 1 users.txt
