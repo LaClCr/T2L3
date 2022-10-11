@@ -37,3 +37,9 @@ EXERCICI 6
 ================
 
 cut -b 1,3,5 users.txt
+
+================
+EXERCICI 7
+================
+
+cat users.txt | grep -v ^[#] | cut -d: -f1
