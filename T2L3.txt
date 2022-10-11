@@ -1,5 +1,13 @@
 ================
 EXERCICI 1
 ================
+
 head -n10 users.txt 
 //head s'utilitza per a mostrar les X primeres línies d'un fitxer.
+
+================
+EXERCICI 2
+================
+
+tail -n5 users.txt
+//tail fa la mateixa funció però amb les últimes línies.
