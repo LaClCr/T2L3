@@ -73,3 +73,10 @@ EXERCICI 12
 ================
 
 cat users.txt | grep -v ^[#] | cut -d: -f4 | sort -n1
+
+================
+EXERCICI 13
+================
+
+cat users.txt | grep -v ^[#] | cut -d: -f1,7 | sed 's/:/-/'
+
