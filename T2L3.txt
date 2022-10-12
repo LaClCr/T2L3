@@ -116,5 +116,10 @@ EXERCICI 19
 
 cat users.txt | grep -v ^[#] | cut -d: -f1,3,6 | sed 's/:/-/g'
 
+================
+EXERCICI 20
+================
+
+cat -n users.txt | grep -v ^[#] | cut -d: -f1,3,6 | sed 's/:/-/g' | sort -rn | sort -k3n
 
 
