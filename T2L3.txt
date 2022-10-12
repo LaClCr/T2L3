@@ -92,3 +92,9 @@ EXERCICI 15
 
 cat users.txt | sed 's/false/NO/'
 
+================
+EXERCICI 16
+================
+
+cat users.txt | grep root.*Administrator | sed 's/System Administrator/Administrador del sistema/'
+
