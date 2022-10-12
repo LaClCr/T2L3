@@ -110,5 +110,11 @@ EXERCICI 18
 
 cat -n users.txt | tail -n+4 | head -n1 | sed 's/system/SISTEMA/'
 
+================
+EXERCICI 19
+================
+
+cat users.txt | grep -v ^[#] | cut -d: -f1,3,6 | sed 's/:/-/g'
+
 
 
