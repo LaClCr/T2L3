@@ -104,5 +104,11 @@ EXERCICI 17
 
 cat users.txt | sed s'/_//'
 
+================
+EXERCICI 18
+================
+
+cat -n users.txt | tail -n+4 | head -n1 | sed 's/system/SISTEMA/'
+
 
 
