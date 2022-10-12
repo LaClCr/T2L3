@@ -80,3 +80,9 @@ EXERCICI 13
 
 cat users.txt | grep -v ^[#] | cut -d: -f1,7 | sed 's/:/-/'
 
+================
+EXERCICI 14
+================
+
+cat users.txt | grep -v ^[#] | cut -d: -f1,5 | sed 's/:/*/'
+
