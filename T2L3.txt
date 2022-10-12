@@ -86,3 +86,9 @@ EXERCICI 14
 
 cat users.txt | grep -v ^[#] | cut -d: -f1,5 | sed 's/:/*/'
 
+================
+EXERCICI 15
+================
+
+cat users.txt | sed 's/false/NO/'
+
