@@ -98,3 +98,11 @@ EXERCICI 16
 
 cat users.txt | grep root.*Administrator | sed 's/System Administrator/Administrador del sistema/'
 
+================
+EXERCICI 17
+================
+
+cat users.txt | sed s'/_//'
+
+
+
