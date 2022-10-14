@@ -80,7 +80,7 @@ cat users.txt | grep -v ^[#] | cut -d: -f4 | sort -n
 EXERCICI 13
 ================
 
-cat users.txt | grep -v ^[#] | cut -d: -f1,7 | sed 's/:/-/'
+cat users.txt | grep -v ^[#] | cut -d: -f1,6 | sed 's/:/-/'
 
 ================
 EXERCICI 14
@@ -111,6 +111,7 @@ EXERCICI 18
 ================
 
 cat -n users.txt | tail -n+4 | head -n1 | sed 's/system/SISTEMA/'
+cat -n users.txt | sed -i '4 s/system/SISTEMA/'
 
 ================
 EXERCICI 19
