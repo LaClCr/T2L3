@@ -1,25 +1,25 @@
 ================
-EXERCICI 1
+EXERCICI 1.	Mostrar les 10 primeres línies
 ================
 
 head -n10 users.txt 
 //head s'utilitza per a mostrar les X primeres línies d'un fitxer.
 
 ================
-EXERCICI 2
+EXERCICI 2.	Mostrar les 5 últimes línies
 ================
 
 tail -n5 users.txt
 //tail fa la mateixa funció però amb les últimes línies.
 
 ================
-EXERCICI 3
+EXERCICI 3.	Mostrar des de la línia 11 fins al final
 ================
 
 tail -n+11 users.txt
 
 ================
-EXERCICI 4
+EXERCICI 4.	Mostrar de la línia 11 a la 20
 ================
 
 tail -n+11 users.txt | head -n10
@@ -27,19 +27,19 @@ tail -n+11 users.txt | head -n10
 per a que ens mostre les 10 primeres sobre el comand anterior.
 
 ================
-EXERCICI 5
+EXERCICI 5.	Mostrar el primer byte (caracter) de cada  línia
 ================
 
 cut -b 1 users.txt
 
 ================
-EXERCICI 6
+EXERCICI 6.	Mostrar el caratcer  1, 3 i 5 de cada línia
 ================
 
 cut -b 1,3,5 users.txt
 
 ================
-EXERCICI 7
+EXERCICI 7.	Mostrar només el nom d’usuari
 ================
 
 cat users.txt | grep -v ^[#] | cut -d: -f1^
@@ -47,80 +47,80 @@ cat users.txt | sed 's/:/ /' | awk '{print $1}' | grep -v ^[#]
 
 
 ================
-EXERCICI 8
+EXERCICI 8.	Igual que l’anterior però dels usuaris que no comencen per ‘_’
 ================
 
 cat users.txt | grep -v ^[#,_] | cut -d: -f1
 
 ================
-EXERCICI 9
+EXERCICI 9.	Mostrar l’identificador d’usuari (UID)
 ================
 
 cat users.txt | grep -v ^[#] | cut -d: -f3
 
 ================
-EXERCICI 10
+EXERCICI 10. Ordenar les línies descendentment
 ================
 
 cat -n users.txt | sort -rn
 
 ================
-EXERCICI 11
+EXERCICI 11. Ordena per UID
 ================
 
 cat users.txt | sort -t: -k3 -n
 
 ================
-EXERCICI 12
+EXERCICI 12. Mostra els identificadors de grup però ordenats numèricament
 ================
 
 cat users.txt | grep -v ^[#] | cut -d: -f4 | sort -n
 
 ================
-EXERCICI 13
+EXERCICI 13. Mostra el nom d’usuari i el seu directori separat pel caracter ‘-‘
 ================
 
 cat users.txt | grep -v ^[#] | cut -d: -f1,6 | sed 's/:/-/'
 
 ================
-EXERCICI 14
+EXERCICI 14.	Mostra la descripció de l’usuari i el seu nom separats pel caracter ‘*’
 ================
 
 cat users.txt | grep -v ^[#] | cut -d: -f1,5 | sed 's/:/*/'
 
 ================
-EXERCICI 15
+EXERCICI 15.	Anem a substituir totes les ocurrències de la paraula ‘false’ per ‘NO’
 ================
 
 cat users.txt | sed 's/false/NO/'
 
 ================
-EXERCICI 16
+EXERCICI 16.	Mostrarem la línia on apareix el root substituint la seua descripció de ‘System Administrator’ per ‘Administrador del Sistema’
 ================
 
 cat users.txt | grep root.*Administrator | sed 's/System Administrator/Administrador del sistema/'
 
 ================
-EXERCICI 17
+EXERCICI 17.	Mostrar tot el fitxer però sense que aparega el caracter ‘_’ al principi dels usuaris que ho tenen.
 ================
 
 cat users.txt | sed s'/_//'
 
 ================
-EXERCICI 18
+EXERCICI 18.	A la línia 4 apareix la paraula ‘system’, canviar-la per la paraula ‘SISTEMA’ al fitxer.
 ================
 
 cat -n users.txt | tail -n+4 | head -n1 | sed 's/system/SISTEMA/'
 cat -n users.txt | sed -i '4 s/system/SISTEMA/'
 
 ================
-EXERCICI 19
+EXERCICI 19.	Mostrar els directoris home, el nom d’usuari i el seu UID separats per ‘-‘
 ================
 
 cat users.txt | grep -v ^[#] | cut -d: -f1,3,6 | sed 's/:/-/g'
 
 ================
-EXERCICI 20
+EXERCICI 20.	Igual que abans però ordenat descendentment i numèricament pel UID
 ================
 
 cat -n users.txt | grep -v ^[#] | cut -d: -f1,3,6 | sed 's/:/-/g' | sort -rn | sort -k3n
